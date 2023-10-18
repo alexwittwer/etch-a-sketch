@@ -3,15 +3,8 @@ const gridWindow = document.querySelector("#gridWindow");
 const resetBtn = document.querySelector(".resetButton");
 const inputValue = document.querySelector("input");
 
-let nums = inputValue.value;
-//when using height width in css, set to 100 / nums
-let numsCalc = 100 / nums;
-
-//creates the grid
+//initialize
 resetSketch();
-
-//updates squareDiv properties for mouseover, sets height/width to ensure correct spacing
-const squarePtr = document.querySelectorAll(".squareDiv");
 
 //sets an active listener to the reset button
 resetBtn.addEventListener("click", () => {
