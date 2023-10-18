@@ -4,13 +4,23 @@
     <meta charset="UTF-8" />
     <title>etch.a.sketch</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      href="https://fonts.googleapis.com/css?family=Sacramento"
     />
-    <script src="script.js" defer></script>
   </head>
   <body>
-    <div id="gridWindow"></div>
+    <div id="fullWindow">
+      <div id="container">
+        <p id="title">etch.a.sketch</p>
+        <div id="gridWindow"></div>
+        <div id="controlWindow">
+          <button class="resetButton">RESET</button>
+        </div>
+      </div>
+      <input type="number" min="10" max="96" step="10" value="10"></input>
+      <span>Grid Size</span>
+    </div>
   </body>
 </html>
