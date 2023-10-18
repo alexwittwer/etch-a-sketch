@@ -1,0 +1,16 @@
+#gridWindow {
+  display: flex;
+  flex-wrap: wrap;
+  width: 256px;
+  height: 256px;
+}
+
+.squareDiv {
+  box-sizing: border-box;
+  border-width: 1px;
+  flex: 1 1 calc(25%);
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
