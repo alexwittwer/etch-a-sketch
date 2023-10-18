@@ -1,7 +1,7 @@
 //CONSTANTS
 const gridWindow = document.querySelector("#gridWindow");
 const resetBtn = document.querySelector(".resetButton");
-const inputValue = document.querySelector("input");
+const inputValue = document.querySelector("#userInput");
 
 //initialize
 resetSketch();
