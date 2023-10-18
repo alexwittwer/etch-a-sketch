@@ -12,11 +12,22 @@ function makeSquareDiv(nums) {
     gridWindow.appendChild(squareDiv);
   }
 }
-let nums = 16;
+
+function promptUser() {
+  let value = Math.floor(prompt("Enter a number between 16 and 100"));
+  if (isNaN(value)) {
+    alert("Unknown entry");
+    promptUser();
+  } else {
+    return value;
+  }
+}
+let nums = promptUser();
 //when using height width in css, set to 100 / nums
 let numsCalc = 100 / nums;
 
 makeSquareDiv(nums);
+
 const squarePtr = document.querySelectorAll(".squareDiv");
 squarePtr.forEach((item) => {
   item.style.height = `${numsCalc}%`;
