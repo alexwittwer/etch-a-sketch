@@ -11,6 +11,18 @@ resetBtn.addEventListener("click", () => {
   resetSketch();
 });
 
+function resetSketch() {
+  let nums = inputValue.value;
+  let numsCalc = 100 / nums;
+  //remove all grids
+  let squareDivPtr = document.querySelectorAll(".squareDiv");
+  squareDivPtr.forEach((item) => {
+    item.remove();
+  });
+  //rebuild with new input value
+  makeSquareDiv(nums, numsCalc);
+}
+
 //Function: creates a user-defined number of "square" divs that will become boxes
 function makeSquareDiv(nums, numsCalc) {
   for (let i = 0; i < nums ** 2; i++) {
@@ -23,16 +35,4 @@ function makeSquareDiv(nums, numsCalc) {
     });
     gridWindow.appendChild(squareDiv);
   }
-}
-
-function resetSketch() {
-  let nums = inputValue.value;
-  let numsCalc = 100 / nums;
-  //remove all grids
-  let squareDivPtr = document.querySelectorAll(".squareDiv");
-  squareDivPtr.forEach((item) => {
-    item.remove();
-  });
-  //rebuild with new input value
-  makeSquareDiv(nums, numsCalc);
 }
