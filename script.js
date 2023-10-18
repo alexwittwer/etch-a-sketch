@@ -6,21 +6,21 @@ const gridWindow = document.querySelector("#gridWindow");
 
 //probably best to call this function with a button rather than input
 function makeSquareDiv(nums) {
-  for (let i = 0; i < nums; i++) {
+  for (let i = 0; i < nums ** 2; i++) {
     let squareDiv = document.createElement("div");
     squareDiv.setAttribute("class", "squareDiv");
     gridWindow.appendChild(squareDiv);
   }
 }
+let nums = 16;
+//when using height width in css, set to 100 / nums
+let numsCalc = 100 / nums;
 
-function sqrt(nums) {
-  return Math.sqrt(nums);
-}
-
-makeSquareDiv(16);
-
+makeSquareDiv(nums);
 const squarePtr = document.querySelectorAll(".squareDiv");
 squarePtr.forEach((item) => {
+  item.style.height = `${numsCalc}%`;
+  item.style.flexBasis = `${numsCalc}%`;
   item.addEventListener("mouseover", () => {
     item.style.backgroundColor = "black";
   });
